@@ -1,0 +1,35 @@
+<?php
+/*!
+ * @file Config.php
+ * @author Sensu Development Team
+ * @date 2018/03/30
+ * @brief 設定
+ */
+
+class Config
+{
+    /*!
+     * @brief SensuプラットフォームAPIキー
+     */
+    const SENSU_PLATFORM_API_KEY = 'sensu_platform_api_key';
+
+    /*!
+     * @brief Twitter API コンシューマーキー
+     */
+    const TWITTER_API_CONSUMER_KEY = 'twitter_api_consumer_key';
+    
+    /*!
+     * @brief Twitter API コンシューマーシークレット
+     */
+    const TWITTER_API_CONSUMER_SECRET = 'twitter_api_consumer_secret';
+
+    /*!
+     * @brief Twitter API アクセストークン
+     */
+    const TWITTER_API_ACCESS_TOKEN = 'twitter_api_access_token';
+    
+    /*!
+     * @brief Twitter API アクセストークンシークレット
+     */
+    const TWITTER_API_ACCESS_TOKEN_SECRET = 'twitter_api_access_token_secret';
+}
