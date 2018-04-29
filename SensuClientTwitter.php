@@ -93,7 +93,7 @@ class SensuClientTwitter
             }
 
             // 投げ銭コマンド
-            if (isset($command[0]) && $command[0] === 'tip')
+            if (isset($command[0]) && strcasecmp($command[0], 'tip') == 0)
             {
                 if (isset($command[3]))
                 {
@@ -127,7 +127,7 @@ class SensuClientTwitter
                 if (isset($result->push_message))
                 {
                     // 投げ銭コマンド
-                    if (isset($command[0]) && $command[0] === 'tip')
+                    if (isset($command[0]) && strcasecmp($command[0], 'tip') == 0)
                     {
                         $self->twitter->post('statuses/update', [
                             'status' => '@'.$self->getScreenNameFromUserId($command[3])."\n".sprintf($result->push_message, '@'.$stream->user->screen_name)."\n\n".RandomString::generate(4)
@@ -157,7 +157,7 @@ class SensuClientTwitter
                 if (isset($result->push_message))
                 {
                     // 投げ銭コマンド
-                    if (isset($command[0]) && $command[0] === 'tip')
+                    if (isset($command[0]) && strcasecmp($command[0], 'tip') == 0)
                     {
                         $self->twitter->post('statuses/update', [
                             'status' => '@'.$self->getScreenNameFromUserId($command[3])."\n".sprintf($result->push_message, '@'.$stream->direct_message->sender->screen_name)."\n\n".RandomString::generate(4)
