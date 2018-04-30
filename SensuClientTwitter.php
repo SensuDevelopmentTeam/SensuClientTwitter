@@ -113,6 +113,11 @@ class SensuClientTwitter
 
             if (!isset($stream->direct_message)) // メンション
             {
+                if ($result->status === 'COMMAND_NOT_FOUND')
+                {
+                    return;
+                }
+
                 // 表示用メッセージが設定されていなければ内部エラー
                 if (!isset($result->message))
                 {
